@@ -34,3 +34,14 @@ No requiere npm, API keys, instalación ni servidor. Para probar en local, abre 
 ## Tecnología
 
 HTML5, CSS3, JavaScript sin dependencias. Se puede adaptar y ampliar libremente.
+
+
+## Novedad: crear rúbricas con IA (Google Gemini)
+
+En el menú **✦ Crear con IA**, introduce materia, curso, actividad, criterios literales y una clave personal de Google Gemini obtenida en https://aistudio.google.com/apikey. Pulsa **Generar rúbrica con IA**, revisa la vista previa y luego **Guardar en Mis rúbricas**. Se puede editar desde la biblioteca.
+
+- No se necesita servidor propio, pero **sí conexión a internet y una clave API personal**; la generación depende del servicio de Google y sus límites, disponibilidad y posible facturación.
+- La clave no se incluye en los archivos, no se guarda en localStorage ni en copias de seguridad. Se mantiene en memoria de la pestaña durante su uso y se envía directamente a Google mediante el encabezado `x-goog-api-key`. **No escribas la clave dentro de los archivos que subas a GitHub.**
+- Una aplicación estática no puede ocultar de forma segura claves compartidas: cada persona debe usar su propia clave. Para una clave centralizada sería necesario implementar un backend seguro con autenticación y límites de uso.
+- **Nunca introduzcas nombres, calificaciones ni datos personales del alumnado en la solicitud a la IA.** Verifica los criterios oficiales y descriptores: la IA puede cometer errores.
+- Para actualizar una instalación anterior de GitHub Pages, sube y reemplaza `index.html`, `app.js`, `styles.css` y añade `ai.js`. Las rúbricas y grupos previamente guardados en el navegador no se borran.
